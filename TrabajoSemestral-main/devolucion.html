@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeStreet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <link rel="icon" href="imgs/logonav2.ico">
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-B2pZeK/PZuL1DfGtnT+j9I4v3i1RczR6P2T4UmrToOo+UB1h19h9zrqrKDE5Od5S5upcfO1HEdI0Zb45qZpwSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <p class="primero blink-text uppercase-text" style="margin-bottom: 0;">Envíos gratis por compras sobre $50.000</p>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black; margin-top: 0;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="#"><img src="imgs/logonav2.png" alt=""></a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Productos.html">Productos</a> 
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Info
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="QuienesSomos.html">Quienes somos</a></li>
+                            <li><a class="dropdown-item" href="Envios.html">Envios</a></li>
+                            <li><a class="dropdown-item" href="Devolucion.html">Devolucion</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                
+                <!-- Imagen del carrito de compras -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">
+                            <img src="imgs/bolsasuper.png" alt="Carrito de compras" class="cart-icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2>Formulario de Devolución</h2>
+        <form id="devolucionForm" onsubmit="return validateForm()">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre">
+                <div id="nombreError" class="error-message"></div>
+            </div>
+            <div class="mb-3">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="apellido" name="apellido">
+                <div id="apellidoError" class="error-message"></div>
+            </div>
+            <div class="mb-3">
+                <label for="contacto" class="form-label">Número de contacto</label>
+                <input type="text" class="form-control" id="contacto" name="contacto">
+                <div id="contactoError" class="error-message"></div>
+            </div>
+            <div class="mb-3">
+                <label for="pedido" class="form-label">Número de pedido</label>
+                <input type="text" class="form-control" id="pedido" name="pedido">
+                <div id="pedidoError" class="error-message"></div>
+            </div>
+            <div class="mb-3">
+                <label for="razon" class="form-label">Razón de devolución</label>
+                <textarea class="form-control" id="razon" name="razon" rows="3"></textarea>
+                <div id="razonError" class="error-message"></div>
+            </div>
+            <div class="mb-3">
+                <label for="imagen" class="form-label">Adjuntar imagen</label>
+                <input type="file" class="form-control" id="imagen" name="imagen">
+                <div id="imagenError" class="error-message"></div>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="button" class="btn btn-secondary" onclick="window.location.href='index.html'">Volver al inicio</button>
+        </form>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+    <script>
+        function validateForm() {
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+            var contacto = document.getElementById("contacto").value;
+            var pedido = document.getElementById("pedido").value;
+            var razon = document.getElementById("razon").value;
+            var imagen = document.getElementById("imagen").value;
+
+            var hasError = false;
+
+            if (nombre === "") {
+                document.getElementById("nombreError").innerHTML = "Por favor, ingresa tu nombre";
+                hasError = true;
+            } else {
+                document.getElementById("nombreError").innerHTML = "";
+            }
+
+            if (apellido === "") {
+                document.getElementById("apellidoError").innerHTML = "Por favor, ingresa tu apellido";
+                hasError = true;
+            } else {
+                document.getElementById("apellidoError").innerHTML = "";
+            }
+
+            if (contacto === "") {
+                document.getElementById("contactoError").innerHTML = "Por favor, ingresa tu número de contacto";
+                hasError = true;
+            } else {
+                document.getElementById("contactoError").innerHTML = "";
+            }
+
+            if (pedido === "") {
+                document.getElementById("pedidoError").innerHTML = "Por favor, ingresa tu número de pedido";
+                hasError = true;
+            } else {
+                document.getElementById("pedidoError").innerHTML = "";
+            }
+
+            if (razon === "") {
+                document.getElementById("razonError").innerHTML = "Por favor, ingresa la razón de tu devolución";
+                hasError = true;
+            } else {
+                document.getElementById("razonError").innerHTML = "";
+            }
+
+            if (imagen === "") {
+                document.getElementById("imagenError").innerHTML = "Por favor, adjunta una imagen";
+                hasError = true;
+            } else {
+                document.getElementById("imagenError").innerHTML = "";
+            }
+
+            return !hasError;
+        }
+    </script>
+</body>
+</html>

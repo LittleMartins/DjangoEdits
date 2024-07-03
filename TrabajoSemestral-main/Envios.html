@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeStreet</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css"> 
+    <link rel="icon" href="imgs/logonav2.ico">
+ 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-B2pZeK/PZuL1DfGtnT+j9I4v3i1RczR6P2T4UmrToOo+UB1h19h9zrqrKDE5Od5S5upcfO1HEdI0Zb45qZpwSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <p class="primero blink-text uppercase-text" style="margin-bottom: 0;">Envíos gratis por compras sobre $50.000</p>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black; margin-top: 0;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="#"><img src="imgs/logonav2.png" alt=""></a>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Productos.html">Productos</a> 
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Info
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="QuienesSomos.html">Quienes somos</a></li>
+                            <li><a class="dropdown-item" href="Envios.html">Envíos</a></li>
+                            <li><a class="dropdown-item" href="Devolucion.html">Devolución</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                
+                <!-- Imagen del carrito de compras -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">
+                            <img src="imgs/bolsasuper.png" alt="Carrito de compras" class="cart-icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Envíos</h1>
+                <p>¡Gracias por elegir nuestros servicios de envío! En CodeStreet nos esforzamos por ofrecerte la mejor experiencia de envío posible.</p>
+                <p>Por favor, complete el siguiente formulario para enviar su solicitud de envío:</p>
+                <!-- Formulario de envío -->
+                <form action="index.html" method="POST" onsubmit="showModal()">
+                    <div class="mb-3">
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="direccion" class="form-label">Dirección</label>
+                        <input type="text" class="form-control" id="direccion" name="direccion" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ciudad" class="form-label">Ciudad</label>
+                        <input type="text" class="form-control" id="ciudad" name="ciudad" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="codigo_postal" class="form-label">Código Postal</label>
+                        <input type="text" class="form-control" id="codigo_postal" name="codigo_postal" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <a href="index.html" class="btn btn-secondary cancelar-btn">Cancelar</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">¡Gracias!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Tu información ha sido enviada correctamente. Te redirigiremos a la página de inicio.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script> 
+    <script>
+        function showModal() {
+            $('#confirmationModal').modal('show'); // Mostrar el modal de confirmación
+
+            setTimeout(function() {
+                window.location.href = "index.html"; // Redireccionar después de 3 segundos
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeStreet - Quienes Somos</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/logonav2.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-B2pZeK/PZuL1DfGtnT+j9I4v3i1RczR6P2T4UmrToOo+UB1h19h9zrqrKDE5Od5S5upcfO1HEdI0Zb45qZpwSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .blink-text {
+            animation: blink 1s infinite; 
+        }
+        .uppercase-text {
+            text-transform: uppercase; 
+            color: white; 
+            font-family: 'Arial Black', sans-serif; 
+        }
+        .carousel-item img {
+            max-width: 400px; 
+            height: auto; 
+            margin: 0 auto; 
+        }
+        #carouselExample {
+            background-color: white; 
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: black; 
+        }
+        .ver-mas-btn-container {
+            max-width: 400px; 
+            margin: 20px auto; 
+        }
+        .ver-mas-btn {
+            color: black; 
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            width: 100%; 
+            text-align: center; 
+            text-decoration: none; 
+            transition: background-color 0.3s; 
+        }
+        .ver-mas-btn:hover {
+            background-color: transparent;
+        }
+        .stock-container h3 {
+            color: black; 
+        }
+        .cart-icon {
+            width: 30px; 
+            height: auto;
+            margin-right: 10px; 
+        }
+        .contacto {
+            background-color: white; 
+            padding: 20px; 
+        }
+        .btn-sm {
+            padding:  10px; /* Ajusta el padding según el tamaño deseado */
+            font-size: 20px; /* Tamaño de la fuente */
+        }
+    </style>
+</head>
+<body>
+    <p class="primero blink-text uppercase-text" style="margin-bottom: 0;">Envíos gratis por compras sobre $50.000</p>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black; margin-top: 0;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="imgs/logonav2.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Productos.html">Productos</a> 
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Info
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="QuienesSomos.html">Quienes somos</a></li>
+                            <li><a class="dropdown-item" href="Envios.html">Envios</a></li>
+                            <li><a class="dropdown-item" href="Devolucion.html">Devolucion</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="carrito.html">
+                            <img src="imgs/bolsasuper.png" alt="Carrito de compras" class="cart-icon">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="contenedor-imagen">
+        <img src="imgs/logonav2.png" alt="Logotipo">
+    </div>
+
+    <div class="descripcion">
+        <h1>Quienes Somos</h1>
+    </div>
+    <div class="sobre-nosotros">
+        <p>
+            Somos una comunidad apasionada por la moda urbana y nos especializamos en poleras modernas y de alta calidad. Nuestro objetivo es ofrecerte diseños únicos y estilos vanguardistas que te permitan expresar tu personalidad.
+            Nuestra misión es brindarte una experiencia de compra excepcional y ayudarte a encontrar la polera perfecta para cada ocasión. Descubre las últimas tendencias y clásicos esenciales en nuestra tienda. 
+            Gracias por formar parte de nuestra comunidad. ¡Explora nuestro catálogo y luce tu estilo con orgullo!
+        </p>
+    </div>
+
+    <div class="contacto">
+        <h2>Contacto</h2>
+        <address>
+            Antonio Varas 666<br>
+            Santiago, Providencia <br>
+            Teléfono: +569 3258 8583<br>
+            Email: codestreet@ventas.cl<br>
+        </address>
+    </div>
+
+    <!-- Botón de volver a index.html -->
+    <a href="index.html" class="btn btn-primary btn-sm">Volver a Inicio</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+    {
+        "precio": 20000,
+        "id": 1,
+        "title": "Black Code",
+        "thumbnailUrl": "imgs/polera1.jpeg"
+    },
+    {
+        "precio": 20000,
+        "id": 2,
+        "title": "Esmerald Code",
+        "thumbnailUrl": "imgs/polera2.jpeg"
+    },
+    {
+        "precio": 20000,
+        "id": 3,
+        "title": "Red code",
+        "thumbnailUrl": "imgs/POLERA3.jpeg"
+    },
+    {
+        "precio": 15000,
+        "id": 4,
+        "title": "ToteBag Blue-Code",
+        "thumbnailUrl": "imgs/totebag.jpeg"
+    },
+    {
+        "precio": 30000,
+        "id": 5,
+        "title": "Esmerald Code",
+        "thumbnailUrl": "imgs/poleron_3.jpeg"
+    },
+    {
+        "precio": 20000,
+        "id": 6,
+        "title": "Red code",
+        "thumbnailUrl": "imgs/Poleron_2.jpeg"
+    }
+]

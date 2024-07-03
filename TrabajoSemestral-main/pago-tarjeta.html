@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagar con Tarjeta</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imgs/logonav2.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-B2pZeK/PZuL1DfGtnT+j9I4v3i1RczR6P2T4UmrToOo+UB1h19h9zrqrKDE5Od5S5upcfO1HEdI0Zb45qZpwSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+</head>
+<body>
+    <p class="primero blink-text uppercase-text" style="margin-bottom: 0;">Envíos gratis por compras sobre $50.000</p>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black; margin-top: 0;">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="imgs/logonav2.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Productos.html">Productos</a> 
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Info
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="QuienesSomos.html">Quienes somos</a></li>
+                            <li><a class="dropdown-item" href="Envios.html">Envíos</a></li>
+                            <li><a class="dropdown-item" href="Devolucion.html">Devolución</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="payment-form">
+            <h3>Pagar con Tarjeta</h3>
+            <form>
+                <div class="form-group">
+                    <label for="card-number">Número de Tarjeta</label>
+                    <input type="text" class="form-control" id="card-number" placeholder="Ingrese el número de su tarjeta">
+                </div>
+                <div class="form-group">
+                    <label for="expiration">Fecha de Expiración</label>
+                    <input type="text" class="form-control" id="expiration" placeholder="MM/YY">
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" class="form-control" id="cvv" placeholder="CVV">
+                </div>
+                <button type="submit" class="btn">Pagar</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
